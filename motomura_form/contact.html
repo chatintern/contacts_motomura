@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>サンプル</title>
+</head>
+<body>
+    <form action="contact_check.php" method="POST">
+        <div>
+            <label for="companyName">会社名：</label>
+            <input type="text" id="companyName" name="companyName" />
+        </div>
+        <div>
+            <label for="name">お名前：</label>
+            <input type="text" id="name" name="name" required/>
+        </div>
+        <div>
+            <label for="email">メールアドレス：</label>
+            <input type="email" id="email" name="email" required/>
+        </div>
+        <div>
+            <label for="inquiryType">お問い合わせ種別:</label>
+            <select name="inquiryType" id="inquiryType" required>
+                <option value="">選択してください</option>
+                <option value="serviceContent">サービス内容</option>
+                <option value="estimate">見積もり</option>
+                <option value="other">その他</option>
+            </select>
+        </div>
+        
+
+        
+        <div>
+            <label for="message">お問い合わせ内容</label>
+            <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit">送信</button>
+    </form>
+    <a href= "login.php" >login</a>
+    <a href= "all.php" >お問い合わせを見る</a>
+    <a href= "delete.php" >削除する</a>
+    <a href= "edit.php" >編集する</a>
+
+</body>
+</html>
+
+        
+<!--
+        <div>
+    
+        <label for="inquiryType">お問い合わせ種別:</label>
+        <select name="inquiryType" id="inquiryType">
+            <option value="serviceContent">サービス内容</option>
+            <option value="estimate">見積もり</option>
+            <option value="other">その他</option>
+        </select>
+         その他のフォーム要素 
+
+    </form>
+</div>
+-->
+        
+
+
+<!--$dsn = 'mysql:dbname=staff;host=localhost';
+$user = 'motomura';
+$password = '06100314Ag';
+
+try{
+    $dbh = new PDO($dsn, $user, $password);
+
+    $sql = 'select * from staffname';
+    foreach ($dbh->query($sql) as $row) {
+        print($row['id'].',');
+        print($row['name']);
+        print('<br>');
+    }
+}catch (PDOException $e){
+    print('Error:'.$e->getMessage());
+    die();
+}
+
+$dbh = null;-->
